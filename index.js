@@ -20,6 +20,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: "OK" });
+})
+
 app.post("/authenticate", (req, res) => {
   const { code } = req.body;
 
